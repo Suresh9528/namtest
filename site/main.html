@@ -1,11 +1,318 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>i'm New to Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedyTow - Bangalore's Best Towing Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 20px 8%;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e74c3c;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            padding: 15px 40px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #c0392b;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 8%;
+            background: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 40px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 80px 8%;
+            background: #2c3e50;
+            color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-item i {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 8%;
+            background: #f9f9f9;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">SpeedyTow</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#why">Why Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>24/7 Emergency Towing Service in Bangalore</h1>
+            <p>Fast, Reliable, and Professional Vehicle Recovery Services</p>
+            <button class="cta-button">Call Now: 080 1234 5678</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-clock"></i>
+                <h3>24/7 Availability</h3>
+                <p>Round-the-clock towing services for all your emergency needs</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Quick Response</h3>
+                <p>Average response time under 30 minutes across Bangalore</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-users"></i>
+                <h3>Professional Team</h3>
+                <p>Certified experts with modern equipment and training</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose" id="why">
+        <div class="section-title">
+            <h2>Why Choose Us</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-star"></i>
+                <h3>10+ Years Experience</h3>
+                <p>Trusted by thousands of customers</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-rupee-sign"></i>
+                <h3>Fair Pricing</h3>
+                <p>No hidden charges, transparent rates</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-tools"></i>
+                <h3>Modern Equipment</h3>
+                <p>State-of-the-art towing vehicles</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+        </div>
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Phone" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Message" rows="5" required></textarea>
+            </div>
+            <button class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 SpeedyTow. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('nav').style.background = 'rgba(255,255,255,0.98)';
+            } else {
+                document.querySelector('nav').style.background = 'rgba(255,255,255,0.95)';
+            }
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you shortly.');
+            this.reset();
+        });
+
+        // Update year automatically
+        document.querySelector('footer p').innerHTML = `&copy; ${new Date().getFullYear()} SpeedyTow. All rights reserved.`;
+    </script>
 </body>
 </html>
